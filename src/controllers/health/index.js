@@ -7,8 +7,8 @@ const requestHandler_1 = require("../../utilities/requestHandler");
 const mainController = async (req, res) => {
     try {
         return res.status(http_status_codes_1.StatusCodes.OK).json(response_1.ResponseData.success({
-            data: { aboutMe: 'Welcome to FRESH E-COMMERCE API sV1' },
-            message: 'Welcome to FRESH E-COMMERCE API sV1'
+            data: { aboutMe: 'Welcome to FRESH WEBHOOKS' },
+            message: 'Welcome to FRESH WEBHOOKS'
         }));
     }
     catch (serverError) {

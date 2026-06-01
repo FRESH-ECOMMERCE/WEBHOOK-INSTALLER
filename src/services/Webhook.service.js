@@ -46,7 +46,8 @@ class WebhookService {
     }
     static async handleBitshipWebhook(payload) {
         try {
-            return await this.forwardToFreshEcommerce(FRESH_ECOMMERCE_BITSHIP_WEBHOOK_URL, payload, 'bitship');
+            await this.forwardToFreshEcommerce(FRESH_ECOMMERCE_BITSHIP_WEBHOOK_URL, payload, 'bitship');
+            return { message: 'success', status: http_status_codes_1.StatusCodes.OK.toString() };
         }
         catch (serviceError) {
             if (serviceError instanceof appError_1.AppError)

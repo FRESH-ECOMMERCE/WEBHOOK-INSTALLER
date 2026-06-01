@@ -6,5 +6,7 @@ const middlewares_1 = require("../middlewares");
 const WebhookSchema_1 = require("../schemas/WebhookSchema");
 const WebhookRouter = (0, express_1.Router)();
 WebhookRouter.post('/midtrans', middlewares_1.MiddleWares.validate({ body: WebhookSchema_1.midtransWebhookBodySchema }), webhook_1.WebhookController.midtransWebhookHandler);
-WebhookRouter.post('/bitships', middlewares_1.MiddleWares.validate({ body: WebhookSchema_1.bitshipWebhookBodySchema }), webhook_1.WebhookController.bitshipWebhookHandler);
+WebhookRouter.post('/bitships', 
+// MiddleWares.validate({ body: bitshipWebhookBodySchema }),
+webhook_1.WebhookController.bitshipWebhookHandler);
 exports.default = WebhookRouter;
